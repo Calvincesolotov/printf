@@ -1,23 +1,25 @@
 #include "main.h"
 
 /**
- * print_revs - function that prints a str in reverse
- * @args: type struct va_arg where is allocated printf arguments
+ * print_reversed_string - Prints a string in reverse.
+ * @args: A va_list representing the variable argument list.
  *
- * Return: the string
+ * Return: The length of the string.
  */
-int print_revs(va_list args)
+int print_reversed_string(va_list args)
 {
+    char *input_string = va_arg(args, char*);
+    int str_length, i;
 
-	char *s = va_arg(args, char*);
-	int i;
-	int j = 0;
+    if (input_string == NULL)
+        input_string = "(null)";
 
-	if (s == NULL)
-		s = "(null)";
-	while (s[j] != '\0')
-		j++;
-	for (i = j - 1; i >= 0; i--)
-		_putchar(s[i]);
-	return (j);
+    str_length = 0;
+    while (input_string[str_length] != '\0')
+        str_length++;
+
+    for (i = str_length - 1; i >= 0; i--)
+        _putchar(input_string[i]);
+
+    return str_length;
 }
