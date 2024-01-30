@@ -17,7 +17,7 @@ int printPercentSymbol(void);
 int _strlen(char *s);
 int _strlenc(const char *s);
 int print_s(va_list val);
-int print_c(va_list val);
+int print_character(va_list val);
 int _putchar(char c);
 int print_i(va_list args);
 int print_d(va_list args);

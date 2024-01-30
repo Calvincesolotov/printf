@@ -8,7 +8,7 @@
 int _printf(const char * const format, ...)
 {
     functionMatch formatHandlers[] = {
-        {"%s", print_s}, {"%c", print_c},
+        {"%s", print_s}, {"%c", print_character},
         {"%%", printPercentSymbol},
         {"%i", print_i}, {"%d", print_d}, {"%r", print_revs},
         {"%R", print_rot13}, {"%b", print_bin},
