@@ -10,7 +10,7 @@ int _printf(const char * const format, ...)
     functionMatch formatHandlers[] = {
         {"%s", printString}, {"%c", print_character},
         {"%%", printPercentSymbol},
-        {"%i", print_i}, {"%d", print_d}, {"%r", print_revs},
+        {"%i", print_integer}, {"%d", print_decimal}, {"%r", print_revs},
         {"%R", print_rot13}, {"%b", print_bin},
         {"%u", print_unsigned},
         {"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
