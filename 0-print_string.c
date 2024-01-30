@@ -1,30 +1,36 @@
 #include "main.h"
+#include <stdarg.h>
+
 /**
- * print_s - print a string.
- * @val: argumen t.
- * Return: the length of the string.
+ * printString - Prints a string.
+ * @val: Argument containing the string to be printed.
+ *
+ * Return: The length of the string.
  */
-
-int print_s(va_list val)
+int printString(va_list val)
 {
-	char *s;
-	int i, len;
+	char *inputString;
+	int index, stringLength;
 
-	s = va_arg(val, char *);
-	if (s == NULL)
+	inputString = va_arg(val, char *);
+
+	if (inputString == NULL)
 	{
-		s = "(null)";
-		len = _strlen(s);
-		for (i = 0; i < len; i++)
-			_putchar(s[i]);
-		return (len);
+		inputString = "(null)";
+		stringLength = _strlen(inputString);
+
+		for (index = 0; index < stringLength; index++)
+			_putchar(inputString[index]);
+
+		return (stringLength);
 	}
 	else
 	{
-		len = _strlen(s);
-		for (i = 0; i < len; i++)
-			_putchar(s[i]);
-		return (len);
+		stringLength = _strlen(inputString);
+
+		for (index = 0; index < stringLength; index++)
+			_putchar(inputString[index]);
+
+		return (stringLength);
 	}
 }
-
