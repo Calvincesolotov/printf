@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_37 - Prints the character '%'.
+ * printPercentSymbol - Prints the character '%'.
  *
  * Description: This function prints the character '%' using the _putchar
  *              function.
