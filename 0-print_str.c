@@ -6,7 +6,7 @@
  * Return: integer.
  */
 
-int strlength(char *s)
+int _strlen(char *s)
 {
 	int c;
 
@@ -22,7 +22,7 @@ int strlength(char *s)
  * Return: integer
  */
 
-int strlenConstant(const char *s)
+int _strlenc(const char *s)
 {
 	int c;
 
