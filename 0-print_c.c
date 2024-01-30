@@ -13,3 +13,4 @@ int print_c(va_list val)
 	_putchar(s);
 	return (1);
 }
+

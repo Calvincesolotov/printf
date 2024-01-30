@@ -27,3 +27,4 @@ int print_s(va_list val)
 		return (len);
 	}
 }
+
