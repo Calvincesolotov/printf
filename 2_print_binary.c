@@ -1,34 +1,41 @@
 #include "main.h"
 
 /**
- * print_bin - prints binary number.
- * @val: parameter.
- * Return: integer
+ * printBinary - prints binary representation of an unsigned integer.
+ * @val: variable argument list.
+ * Return: number of characters printed
  */
-int print_bin(va_list val)
+int printBinary(va_list val)
 {
-	int flag = 0;
-	int cont = 0;
-	int i, a = 1, b;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int p;
+    int hasSetBit = 0;      /* Flag to track if a bit has been set */
+    int charCount = 0;      /* Count of characters printed */
+    int i, mask = 1, bit;    /* Loop variable, bitmask, and individual bit */
 
-	for (i = 0; i < 32; i++)
-	{
-		p = ((a << (31 - i)) & num);
-		if (p >> (31 - i))
-			flag = 1;
-		if (flag)
-		{
-			b = p >> (31 - i);
-			_putchar(b + 48);
-			cont++;
-		}
-	}
-	if (cont == 0)
-	{
-		cont++;
-		_putchar('0');
-	}
-	return (cont);
+    unsigned int number = va_arg(val, unsigned int);   /* Extract the unsigned int */
+    unsigned int shiftedBit;                            /* Variable to store shifted bit */
+
+    /* Loop through each bit of the 32-bit representation of the input number */
+    for (i = 0; i < 32; i++)
+    {
+        shiftedBit = ((mask << (31 - i)) & number);    /* Shift the bitmask and apply it to the number */
+        
+        if (shiftedBit >> (31 - i))
+            hasSetBit = 1;  /* If the bit is non-zero, set the flag */
+
+        if (hasSetBit)
+        {
+            bit = shiftedBit >> (31 - i);
+            _putchar(bit + '0'); /* Print the binary representation of the bit */
+            charCount++;
+        }
+    }
+
+    /* If no bits were set, print '0' */
+    if (charCount == 0)
+    {
+        charCount++;
+        _putchar('0');
+    }
+
+    return (charCount);
 }

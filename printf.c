@@ -11,7 +11,7 @@ int _printf(const char * const format, ...)
         {"%s", printString}, {"%c", print_character},
         {"%%", printPercentSymbol},
         {"%i", print_integer}, {"%d", print_decimal}, {"%r", print_reversed_string},
-        {"%R", print_rotateBy13}, {"%b", print_bin},
+        {"%R", print_rotateBy13}, {"%b", printBinary},
         {"%u", print_unsigned},
         {"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
         {"%S", print_exc_string}, {"%p", print_pointer}

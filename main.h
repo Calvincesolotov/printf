@@ -21,7 +21,7 @@ int print_character(va_list val);
 int _putchar(char c);
 int print_integer(va_list args);
 int print_decimal(va_list args);
-int print_bin(va_list val);
+int printBinary(va_list val);
 int print_unsigned(va_list args);
 int print_oct(va_list val);
 int print_HEX(va_list val);
