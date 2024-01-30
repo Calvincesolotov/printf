@@ -12,11 +12,11 @@
  */
 int print_character(va_list val)
 {
-    char character;
+	char character;
 
-    character = va_arg(val, int);
-    _putchar(character);
-    return (1);
+	character = va_arg(val, int);
+	_putchar(character);
+	return (1);
 }
 
 
