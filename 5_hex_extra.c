@@ -6,7 +6,7 @@
  *
  * Return: The number of characters printed.
  */
-int print_hex_extra(unsigned long int num)
+int print-hex_extra(unsigned long int num)
 {
     long int i;
     long int *hexArray;
