@@ -5,7 +5,7 @@
  * @args: Arguments list.
  * Return: Number of characters printed.
  */
-int print_pointer(va_list args)
+int printPointer(va_list args)
 {
 	void *ptr;
 	char *nil_str = "(nil)";
