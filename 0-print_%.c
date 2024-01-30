@@ -8,7 +8,7 @@
  *
  * Return: 1 - Always returns 1.
  */
-int print_37(void)
+int printPercentSymbol(void)
 {
 	_putchar(37); /* ASCII code for '%' */
 	return (1);
