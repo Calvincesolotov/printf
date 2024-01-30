@@ -1,17 +1,23 @@
 #include "main.h"
 
+/**
+ * _printf - Custom printf function
+ * @format: Format string
+ *
+ * Return: Number of characters printed (excluding null byte)
+ */
 int _printf(const char *format, ...)
 {
-	int char_print = 0;
-	va_list list_of_args;
+    int char_print = 0;
+    va_list list_of_args;
 
-	if (format == NULL)
-	return -1;
+    if (format == NULL)
+        return -1;
 
-	va_start(list_of_args, format);
+    va_start(list_of_args, format);
 
-	while (*format)
-	{
+    while (*format)
+    {
         if (*format != '%')
         {
             write(1, format, 1);
@@ -37,13 +43,10 @@ int _printf(const char *format, ...)
             else if (*format == 's')
             {
                 char *str = va_arg(list_of_args, char*);
-                int str_len = 0;
-
-                while (str[str_len] != '\0')
-                    str_len++;
+                int str_len = strlen(str);
 
                 write(1, str, str_len);
-                char_print = str_len + 1;  // Correct: Adjust char_print for the 's' case
+                char_print += str_len;
             }
         }
         format++;
