@@ -14,8 +14,8 @@ typedef struct format
 
 int _printf(const char *format, ...);
 int printPercentSymbol(void);
-int str_length(char *s);
-int str_length_const(const char *s);
+int strlength(char *s);
+int strlenConstant(const char *s);
 int printString(va_list val);
 int print_character(va_list val);
 int _putchar(char c);
