@@ -1,31 +1,33 @@
 #include "main.h"
 
 /**
- * _strlen - Finds the length of a mutable string.
- * @str: The string
- * Return: The length of the string as an integer.
+ * _strlen - finds the lenght of a mutable string.
+ * @s: string
+ * Return: integer.
  */
 
-int strlenMutable(char *str)
+int _strlen(char *s)
 {
-	int length;
+	int c;
 
-	for (length = 0; str[length] != '\0'; length++)
+	for (c = 0; s[c] != 0; c++)
 		;
-	return (length);
+	return (c);
+
 }
 
 /**
- * _strlenc - Finds the length of a constant string.
- * @str: The string
- * Return: The length of the string as an integer.
+ * _strlenc - finds length of a constant string
+ * @s: string
+ * Return: integer
  */
 
-int _strlenConstant(const char *str)
+int _strlenc(const char *s)
 {
-	int length;
+	int c;
 
-	for (length = 0; str[length] != '\0'; length++)
+	for (c = 0; s[c] != 0; c++)
 		;
-	return (length);
+	return (c);
 }
+
